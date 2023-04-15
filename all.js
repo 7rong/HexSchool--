@@ -77,14 +77,14 @@ searchBtn.addEventListener('click',function(e){
         return
     }
 
-    // let filterMatch = [];
+    let filterMatch = [];
     // filterMatch = data.filter(item => {
     //     item.作物名稱.match(crop.value.trim());
     // });
     // match無法使用，顯示Cannot read properties of null (reading 'match')
 
     filterMatch = data.filter(item => {
-        item.作物名稱===crop.value.trim();
+        return item.作物名稱===crop.value.trim();
     });
     
     if (filterMatch.length===0){
